@@ -86,3 +86,6 @@ img {
     background: none;
     border: 0px solid cyan;
 }
+a:hover {
+    color: red;
+}
