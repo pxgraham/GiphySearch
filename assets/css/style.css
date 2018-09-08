@@ -1,0 +1,88 @@
+.b {
+    border: 1px solid black;
+}
+.c {
+    text-align: center;
+}
+.l {
+    text-align: left;
+}
+.r {
+    text-align: right;
+}
+.big {
+    font-size: 30px;
+}
+.pushTop {
+    margin-top: 5px;
+}
+.pushBot {
+    margin-bottom: 30px;
+}
+.pushLeft{
+    margin-left: 138px;
+}
+.footer {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: black;
+    text-align: center;
+    width: 100%;    
+}
+.btnClear {
+    width: 20px;
+    font-size: 10px;
+    word-wrap: break-word;
+    background: red;
+    color: white;
+}
+.nav {
+    border: 2px solid white;
+}
+.sideSpace {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.noSideSpace {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#quiz {
+    display: none;
+}
+#resBad {
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
+}
+#resGood {
+    font-weight: bolder;
+    font-size: 20px;
+    color: lime;
+}
+#end {
+    display: none;
+}
+.stext {
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    color: white;
+    font-weight: bolder;
+}
+
+span {
+    background: red;
+    height: 100px;
+}
+img {
+    width: 160px;
+    height: 120px;
+    margin: 5px 5px 0px 5px;
+}
+.imgBtn {
+    width: 50%;
+    margin: 0px 0px 0px 0px;
+    background: none;
+    border: 0px solid cyan;
+}
