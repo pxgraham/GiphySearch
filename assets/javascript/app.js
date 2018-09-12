@@ -1,7 +1,8 @@
 $(document).ready(function () {
     var still;
     var anim;
-    var key = 'ajDISQ1hKNMiLrAjZu80jIOatP30XRcp';
+    var key = 'AsGfif7JjnpVSemTXFF5otD0Eiw1KN7W';
+    var numberOfPics = 5;
 
 
     var topic = [
@@ -11,18 +12,21 @@ $(document).ready(function () {
         'Final Fantasy'
     ];
 
-
-    for (var i = 0; i < topic.length; i++) {
-        var btn = $('<button>');
-        btn.text(topic[i]);
-        $('#btnContainer').append(btn);
+    function btnCreation() {
+        for (var i = 0; i < topic.length; i++) {
+            var btn = $('<button>');
+            btn.text(topic[i]);
+            $('#btnContainer').append(btn);
+        }
     }
+    btnCreation();
 
     $('#add').click(function () {
         var searched = $('#search').val();
-        var btn = $('<button>');
-        btn.text(searched);
-        $('#btnContainer').append(btn);
+        $('#search').text('');
+        topic.push(searched);
+        $('#btnContainer').html('');
+        btnCreation();
     });
 
     $('#delete').click(function () {
@@ -31,7 +35,7 @@ $(document).ready(function () {
     });
 
     $('body').on('click', 'button', function (e) {
-        for (var i = 0; i < 9; i++) {
+        for (var i = 0; i < numberOfPics; i++) {
             var queryURL = 'https://api.giphy.com/v1/gifs/random?api_key=' + key + '&tag=' + e.currentTarget.innerText;
             $.ajax({
                 url: queryURL,
@@ -64,12 +68,12 @@ $(document).ready(function () {
         }
     });
 
-$('body').on('click', 'a', function(e) {
-        var btn = e.currentTarget;
-        console.log(btn);
-        alert('liked!');
-        btn.remove();
-})
+    $('a').on('click', function(e) {
+            var btn = e.currentTarget;
+            console.log(btn);
+            alert('liked!');
+            btn.remove();
+    })
 
     $('body').on('click', 'img', function (e) {
 
