@@ -1,15 +1,14 @@
 $(document).ready(function () {
     var still;
     var anim;
-    var key = 'AsGfif7JjnpVSemTXFF5otD0Eiw1KN7W';
     var numberOfPics = 5;
 
 
     var topic = [
-        'Adventure Time',
-        'Dark Souls',
-        'Runescape',
-        'Final Fantasy'
+        'Football',
+        'Hockey',
+        'Nature',
+        'Funny'
     ];
 
     function btnCreation() {
@@ -36,7 +35,7 @@ $(document).ready(function () {
 
     $('body').on('click', 'button', function (e) {
         for (var i = 0; i < numberOfPics; i++) {
-            var queryURL = 'https://api.giphy.com/v1/gifs/random?api_key=' + key + '&tag=' + e.currentTarget.innerText;
+            var queryURL = 'https://api.giphy.com/v1/gifs/random?api_key=AsGfif7JjnpVSemTXFF5otD0Eiw1KN7W&tag=' + e.currentTarget.innerText;
             $.ajax({
                 url: queryURL,
                 method: "GET"
@@ -54,7 +53,7 @@ $(document).ready(function () {
                 var btn2 = $('<a>')
                     .css('font-size', '15px')  
                     .css('color', 'red') 
-                    .text('♥ Like');
+                    // .text('♥ Like');
 
                 var img = $('<img>')
                     .attr('src', still)
@@ -71,7 +70,7 @@ $(document).ready(function () {
     $('a').on('click', function(e) {
             var btn = e.currentTarget;
             console.log(btn);
-            alert('liked!');
+            // alert('liked!');
             btn.remove();
     })
 
